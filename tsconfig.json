@@ -4,7 +4,8 @@
 		"removeComments": true,
 		"outDir": "dist",
 		"module": "commonjs",
-		"target": "ES5"
+		"target": "ES6",
+		"lib": ["ES2015", "DOM"]
 	},
 	"include": ["**/*"]
 }
