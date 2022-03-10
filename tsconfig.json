@@ -1,11 +1,10 @@
 {
-	"compilerOptions": {
-		"sourceMap": false,
-		"removeComments": true,
-		"outDir": "dist",
-		"module": "commonjs",
-		"target": "ES6",
-		"lib": ["ES2015", "DOM"]
-	},
-	"include": ["**/*"]
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true
+  },
+  "files": ["src/index.ts"]
 }

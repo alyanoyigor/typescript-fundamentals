@@ -21,7 +21,7 @@ class KeyValuePair<TKey, TValue> {
 
 const keyValuePair = new KeyValuePair<number, string>(1, 'first');
 
-class Iterator<T> {
+class SampleIterator<T> {
 	private data: T[] = [];
 
 	public add(item: T) {
@@ -49,7 +49,7 @@ class Iterator<T> {
 	}
 }
 
-const iterator = new Iterator<number>();
+const iterator = new SampleIterator<number>();
 iterator.add(1);
 iterator.add(2);
 iterator.add(3);
