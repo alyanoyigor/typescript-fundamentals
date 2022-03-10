@@ -9,33 +9,33 @@ var IceCreamFilling;
     IceCreamFilling[IceCreamFilling["Caramel"] = 6] = "Caramel";
     IceCreamFilling[IceCreamFilling["Berry"] = 10] = "Berry";
 })(IceCreamFilling || (IceCreamFilling = {}));
-const getIceCreamPrice = (size, filling) => {
-    let resultPrice = size;
+var getIceCreamPrice = function (size, filling) {
+    var resultPrice = size;
     if (filling && IceCreamSize.Big === size) {
         resultPrice += filling;
     }
     return resultPrice;
 };
-const requestForUserAnswer = (size) => {
-    const iceCreamSize = prompt('Введите размер мороженного: маленький или большой');
+var requestForUserAnswer = function (size) {
+    var iceCreamSize = prompt('Введите размер мороженного: маленький или большой');
     if (iceCreamSize === null)
         return;
-    const iceCreamSizeLowerCase = iceCreamSize.toLowerCase();
+    var iceCreamSizeLowerCase = iceCreamSize.toLowerCase();
     switch (iceCreamSizeLowerCase) {
         case 'маленький':
             alert('Цена вашего мороженого ' + getIceCreamPrice(IceCreamSize.Small));
             break;
         case 'большой':
-            const iceCreamFilling = prompt('Введите вкус мороженного: шоколад, малина или карамель');
+            var iceCreamFilling = prompt('Введите вкус мороженного: шоколад, малина или карамель');
             getIceCreamFilling(iceCreamSize, iceCreamFilling);
             break;
         default:
-            const newSize = prompt('Такого размера не сущевствует, введите один из предложенных: маленький или большой');
+            var newSize = prompt('Такого размера не сущевствует, введите один из предложенных: маленький или большой');
             requestForUserAnswer(newSize);
             break;
     }
 };
-const getIceCreamFilling = (iceCreamSize, iceCreamFilling) => {
+var getIceCreamFilling = function (iceCreamSize, iceCreamFilling) {
     switch (iceCreamFilling) {
         case 'шоколад':
             alert('Цена вашего мороженого вместе с добавкой ' +
@@ -50,7 +50,7 @@ const getIceCreamFilling = (iceCreamSize, iceCreamFilling) => {
                 getIceCreamPrice(IceCreamSize.Big, IceCreamFilling.Berry));
             break;
         default:
-            const filling = prompt('Такого вкуса не сущевствует, введите один из предложенных: шоколад, малина или карамель');
+            var filling = prompt('Такого вкуса не сущевствует, введите один из предложенных: шоколад, малина или карамель');
             getIceCreamFilling(iceCreamSize, filling);
             break;
     }
